@@ -30,12 +30,19 @@ public class Main {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         String inputText = "";
         while (!inputText.toLowerCase().equals("exit")) {
-            System.out.println("Введите фамилию для поиска, для выхода введите exit");
-            inputText = reader.readLine().toString().toLowerCase();
-            System.out.println("Нашлись телефоны:");
-            System.out.println(book.searchPhone(inputText).toString());
-            System.out.println("Нашлись emails:");
-            System.out.println(book.searchEmail(inputText).toString());
+
+            try {
+                System.out.println("Введите фамилию для поиска, для выхода введите exit");
+                inputText = reader.readLine().toString().toLowerCase();
+                System.out.println("Нашлись телефоны:");
+                System.out.println(book.searchPhone(inputText).toString());
+                System.out.println("Нашлись emails:");
+                System.out.println(book.searchEmail(inputText).toString());
+            }
+            catch (IOException e){
+                e.printStackTrace();
+            }
+
         }
     }
 
