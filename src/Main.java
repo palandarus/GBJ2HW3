@@ -22,7 +22,7 @@ public class Main {
     //51 lnames
     static String lnames = "АВРАМОВ АВРАМЧИК АВРАСИН АВРАШИН АВРАШКОВ АВРЕЛИН АВРОРИН АВРОРОВ АВРОСИМОВ АВРОСИНОВ АВСЕЕВ АВСЕЕНКО АВСЕЙКИН АВСЮКОВ АВТАЙКИН ПАЛАМАРЧУК ПАЛАМОНОВ ПАЛАШИН ПАЛАШОВ ПАЛЕЕВ ПАЛЕЙ ПАЛЕМОНОВ ПАЛЕНОВ ПАЛЕЧЕК ПАЛИВОДА ПАЛИВОДОВ ПАЛИЙ ПАЛИМПСЕСТОВ ПАЛИН ПАЛИНОВ ПАЛИЧЕВ ПАЛКИН ПАЛЛАДИН ПАЛУХИН ПАЛЫВОДА ПАЛЬГИН ПАЛЬГОВ ПАЛЬГУЕВ ПАЛЬГУНОВ УРАЛОВ УРАЛЬСКИЙ УРАЛЬСКИХ УРАНИЕВ УРАНОВ УРАНОСОВ УРБАНОВ УРБАНОВИЧ УРБАНСКИЙ УРВАНИН УРВАНОВ УРВАНЦЕВ";
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)  {
         System.out.println(parse(text));
 
         PhoneBook book = new PhoneBook(genArrayListPerson(80));
@@ -38,6 +38,9 @@ public class Main {
                 System.out.println(book.searchPhone(inputText).toString());
                 System.out.println("Нашлись emails:");
                 System.out.println(book.searchEmail(inputText).toString());
+            }
+            catch (NullPointerException e){
+                e.printStackTrace();
             }
             catch (IOException e){
                 e.printStackTrace();

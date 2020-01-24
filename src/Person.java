@@ -40,6 +40,6 @@ public class Person {
     }
 
     public void print(){
-        System.out.println(this.name+" "+this.lastName+" "+this.phone+" "+this.email);
+        System.out.println("          "+this.name+" "+this.lastName+" "+this.phone+" "+this.email);
     }
 }
