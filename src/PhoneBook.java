@@ -23,30 +23,30 @@ public class PhoneBook {
     }
 
     public ArrayList<String> searchEmail(String lname) {
-        ArrayList<Person> owners=pages.get(lname);
-        ArrayList<String> emails=new ArrayList<>();
-        for (Person person: owners
-             ) {
+        ArrayList<Person> owners = pages.get(lname);
+        ArrayList<String> emails = new ArrayList<>();
+        for (Person person : owners
+        ) {
             emails.add(person.getEmail());
         }
         return emails;
     }
 
     public ArrayList<String> searchPhone(String lname) {
-        ArrayList<Person> owners=pages.get(lname);
-        ArrayList<String> phones=new ArrayList<>();
-        for (Person person: owners
+        ArrayList<Person> owners = pages.get(lname);
+        ArrayList<String> phones = new ArrayList<>();
+        for (Person person : owners
         ) {
             phones.add(person.getPhone());
         }
         return phones;
     }
 
-    public void print(){
-        for(Map.Entry<String, ArrayList<Person>> entry: pages.entrySet()){
-            System.out.println("Key - "+entry.getKey());
-            for (Person person: entry.getValue()
-                 ) {
+    public void print() {
+        for (Map.Entry<String, ArrayList<Person>> entry : pages.entrySet()) {
+            System.out.println("Key - " + entry.getKey());
+            for (Person person : entry.getValue()
+            ) {
                 person.print();
             }
         }

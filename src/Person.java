@@ -1,12 +1,12 @@
 public class Person {
-    private String name="-", lastName="-", surname="-", email="-", phone="-";
+    private String name = "-", lastName = "-", surname = "-", email = "-", phone = "-";
 
     public Person(String name, String lastName, String surname) {
         this.name = name;
         this.lastName = lastName;
         this.surname = surname;
-        this.phone=Integer.toString ((int)(Math.random()*100000+100000));
-        this.email=Integer.toString ((int)(Math.random()*100000+100000))+"@"+Integer.toString ((int)(Math.random()*100000+100000))+".ru";
+        this.phone = Integer.toString((int) (Math.random() * 100000 + 100000));
+        this.email = Integer.toString((int) (Math.random() * 100000 + 100000)) + "@" + Integer.toString((int) (Math.random() * 100000 + 100000)) + ".ru";
     }
 
     public Person(String name, String lastName) {
@@ -15,8 +15,8 @@ public class Person {
         this.name = name;
         this.lastName = lastName;
         this.surname = surname;
-        this.phone=Integer.toString ((int)(Math.random()*100000+100000));
-        this.email=Integer.toString ((int)(Math.random()*100000+100000))+"@"+Integer.toString ((int)(Math.random()*100000+100000))+".ru";
+        this.phone = Integer.toString((int) (Math.random() * 100000 + 100000));
+        this.email = Integer.toString((int) (Math.random() * 100000 + 100000)) + "@" + Integer.toString((int) (Math.random() * 100000 + 100000)) + ".ru";
     }
 
     public String getName() {
@@ -39,7 +39,7 @@ public class Person {
         return phone;
     }
 
-    public void print(){
-        System.out.println("          "+this.name+" "+this.lastName+" "+this.phone+" "+this.email);
+    public void print() {
+        System.out.println("          " + this.name + " " + this.lastName + " " + this.phone + " " + this.email);
     }
 }
